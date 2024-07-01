@@ -77,6 +77,9 @@ import {
   Edit,
 } from '@element-plus/icons-vue'
 
+const editProduct=(id)=>{
+  router.push({name:"edit-products",params:{id}})
+}
 </script>
 
 <template>
@@ -90,7 +93,7 @@ import {
     <el-table-column fixed="right" label="Operations">
 
       <template #default="{ row }" >
-        <el-button type="primary" :icon="Edit" circle/>
+        <el-button type="primary" :icon="Edit" @click="editProduct(row.id)" circle/>
         <el-popconfirm
           confirm-button-text="Yes"
           cancel-button-text="No"
