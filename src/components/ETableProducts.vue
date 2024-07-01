@@ -37,7 +37,7 @@ const fetchProducts = () => {
   })
     .then(res => {
       users.value = res.data
-      totalUsers.value = res.data.total;
+      totalUsers.value = res.data.length;
     })
     .catch(err => console.log('errors:', err))
     .finally(() => {
